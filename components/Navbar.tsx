@@ -59,7 +59,7 @@ function Navbar() {
                 </ul>
             </div>
             <div className="navbar-end">
-                <a href='/' className="btn btn-primary">Book a table</a>
+                <a href='/booking' className="btn btn-primary">Book a table</a>
             </div>
         </div>
     )
