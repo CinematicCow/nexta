@@ -1,8 +1,10 @@
+import Image from "next/image"
+
 type CardProps = { title: string, desc: string, img: string }
 const Card = (props: CardProps) => {
     return (
         <div className="card card-compact w-96 h-full bg-base-100 shadow-xl">
-            <figure><img src={props.img} alt="foto" /></figure>
+            <figure><Image src={props.img} alt="foto" width={400} height={100} /></figure>
             <div className="card-body">
                 <h2 className="card-title">{props.title}</h2>
                 <p>{props.desc}</p>
@@ -19,18 +21,18 @@ function About() {
         <div>
             <div
                 className="hero"
-                style={{ backgroundImage: "url(https://daisyui.com/images/stock/photo-1507358522600-9f71e620c44e.jpg)", minHeight: "40em" }}
+                style={{ backgroundImage: "url(https://plus.unsplash.com/premium_photo-1679434184867-a294eb85400c?q=80&w=1470&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D)", minHeight: "40em" }}
             >
                 <div className="hero-overlay bg-opacity-60" />
                 <div className="hero-content text-center text-neutral-content">
                     <div className="max-w-md">
-                        <h1 className="mb-5 text-5xl font-bold font-elite">About</h1>
+                        <h1 className="mb-5 text-8xl font-bold font-arthemis">About</h1>
                     </div>
                 </div>
             </div>
 
             <div className="flex flex-col justify-center items-center pt-[120px] mb-[5em]">
-                <h1 className="font-elite text-4xl text-center max-w-xl">
+                <h1 className="font-arthemis text-6xl text-center max-w-xl">
                     Second Home Cafe is your home away from home…
                 </h1>
                 <p className="mt-8 font-sen font-light text-clip max-w-5xl text-center text-2xl">
@@ -43,7 +45,7 @@ function About() {
                 </p>
             </div>
 
-            <div className="flex flex-row flex-wrap justify-around items-center mb-5 h-ful ">
+            <div className="flex flex-row flex-wrap justify-around items-center mb-32 h-ful ">
                 <Card
                     title="Dine-in Food & Drinks"
                     desc="Welcome! Come on in, pull a chair & enjoy the cosy atmosphere. Dine in and enjoy excellent coffee, refreshing meals, light snacks, lunch and more."

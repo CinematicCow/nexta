@@ -1,5 +1,6 @@
-import React from 'react'
+import Link from "next/link"
 import { navMenus } from "../config/navItem"
+import Image from "next/image"
 
 function Navbar() {
     return (
@@ -30,7 +31,7 @@ function Navbar() {
                             navMenus.map((menu, i) => {
                                 return (
                                     <li key={i+1}>
-                                        <a href={menu.route}>{menu.name}</a>
+                                        <Link href={menu.route}>{menu.name}</Link>
                                     </li>
                                 )
                             })
@@ -40,10 +41,10 @@ function Navbar() {
 
                 <div className="lg:avatar hidden">
                     <div className="w-24 rounded-full">
-                        <img src="logo.png" alt="logo" />
+                        <Image src="/logo.png" width={100} height={100} alt="logo" />
                     </div>
                 </div>
-                <a className="btn btn-ghost text-xl" href="/">Big Tree House </a>
+                <Link className="btn btn-ghost text-xl" href="/">Big Tree House </Link>
             </div>
             <div className="navbar-center hidden lg:flex">
                 <ul className="menu menu-horizontal px-1">
@@ -51,7 +52,7 @@ function Navbar() {
                         navMenus.map((menu,i) => {
                             return (
                                 <li key={i+1}>
-                                    <a href={menu.route}>{menu.name}</a>
+                                    <Link href={menu.route}>{menu.name}</Link>
                                 </li>
                             )
                         })
@@ -59,7 +60,7 @@ function Navbar() {
                 </ul>
             </div>
             <div className="navbar-end">
-                <a href='/booking' className="btn btn-primary">Book a table</a>
+                <Link href='/booking' className="btn btn-primary">Book a table</Link>
             </div>
         </div>
     )

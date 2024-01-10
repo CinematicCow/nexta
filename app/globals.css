@@ -2,4 +2,16 @@
 @tailwind components;
 @tailwind utilities;
 
+@font-face{
+    font-family: "Arthemis";
+    src:url("../public/Arthemis.ttf");
+}
 
+
+.border-image {
+    border-image-source: url('../public/border.png');
+    border-image-slice: 100 fill; /* Adjust the slice value based on your border image */
+    border-image-width: 1000; /* Adjust the width based on your design */
+    z-index: 1;
+
+}
