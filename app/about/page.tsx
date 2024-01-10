@@ -1,7 +1,7 @@
 type CardProps = { title: string, desc: string, img: string }
 const Card = (props: CardProps) => {
     return (
-        <div className="card card-compact w-96 bg-base-100 shadow-xl">
+        <div className="card card-compact w-96 h-full bg-base-100 shadow-xl">
             <figure><img src={props.img} alt="foto" /></figure>
             <div className="card-body">
                 <h2 className="card-title">{props.title}</h2>
@@ -43,26 +43,25 @@ function About() {
                 </p>
             </div>
 
-            <div className="flex flex-row justify-evenly items-center mb-5">
-                <Card title="Dine-in Food & Drinks"
+            <div className="flex flex-row flex-wrap justify-around items-center mb-5 h-ful ">
+                <Card
+                    title="Dine-in Food & Drinks"
                     desc="Welcome! Come on in, pull a chair & enjoy the cosy atmosphere. Dine in and enjoy excellent coffee, refreshing meals, light snacks, lunch and more."
-                    img="https://images.unsplash.com/photo-1587080413959-06b859fb107d?w=400&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTB8fGNvZmZlZSUyMGN1cHxlbnwwfHwwfHx8MA%3D%3D"
+                    img="https://images.unsplash.com/photo-1587080413959-06b859fb107d?w=400&h=300&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTB8fGNvZmZlZSUyMGN1cHxlbnwwfHwwfHx8MA%3D%3D"
                 />
 
                 <Card
                     title="Convenient Takeaways"
                     desc="Take the Second Home experience with you. Order online and collect your takeaways. We have plenty of options to choose from."
-                    img="https://images.unsplash.com/photo-1597579018905-8c807adfbed4?w=400&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+                    img="https://images.unsplash.com/photo-1597579018905-8c807adfbed4?w=400&h=300&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
                 />
 
                 <Card
                     title="Venue Hire & Catering"
                     desc="Birthdays, Bridal showers, Christmas parties or Work events, let us host your event while you relax and make good memories. We are happy to cater at your chosen venue as well."
-                    img="https://images.unsplash.com/photo-1609590981063-d495e2914ce4?w=400&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+                    img="https://images.unsplash.com/photo-1609590981063-d495e2914ce4?w=400&h=300&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
                 />
-
             </div>
-
         </div >
     )
 }
