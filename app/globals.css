@@ -3,8 +3,8 @@
 @tailwind utilities;
 
 @font-face{
-    font-family: "Arthemis";
-    src:url("../public/Arthemis.ttf");
+    font-family: "Bohemian";
+    src:url("../public/typer.ttf");
 }
 
 

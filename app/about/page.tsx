@@ -26,13 +26,13 @@ function About() {
                 <div className="hero-overlay bg-opacity-60" />
                 <div className="hero-content text-center text-neutral-content">
                     <div className="max-w-md">
-                        <h1 className="mb-5 text-8xl font-bold font-arthemis">About</h1>
+                        <h1 className="mb-5 text-8xl font-bold font-typer">About</h1>
                     </div>
                 </div>
             </div>
 
             <div className="flex flex-col justify-center items-center pt-[120px] mb-[5em]">
-                <h1 className="font-arthemis text-6xl text-center max-w-xl">
+                <h1 className="font-typer text-6xl text-center max-w-xl">
                     Second Home Cafe is your home away from home…
                 </h1>
                 <p className="mt-8 font-sen font-light text-clip max-w-5xl text-center text-2xl">

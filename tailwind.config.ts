@@ -11,7 +11,7 @@ const config: Config = {
       fontFamily: {
         pacifico: ['Pacifico', 'cursive'],
         sen: ['Sen', 'sans-serif'],
-        arthemis: ['Arthemis', 'monospace']
+        typer: ['Bohemian' ,'monospace']
       }
     }
   },

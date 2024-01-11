@@ -11,7 +11,7 @@ const Card = (props: CardProps) => {
         <div className="card w-96 bg-base-100 shadow-xl image-full" onClick={() => router.push("/booking/" + props.location)}>
             <figure><Image src={props.img} alt={props.location} width={400} height={100} /></figure>
             <div className="card-body text-center">
-                <h2 className="mt-10 text-4xl font-arthemis ">{props.location}</h2>
+                <h2 className="mt-10 text-4xl font-typer ">{props.location}</h2>
                 <p className="mt-8 font-sen">{props.desc}</p>
             </div>
         </div>
@@ -24,7 +24,7 @@ function Booking() {
     return (
         <>
             <div className="flex flex-col justify-center items-center">
-                <h1 className="text-8xl font-arthemis mt-28"> Dine in spots</h1>
+                <h1 className="text-8xl font-typer mt-28"> Dine in spots</h1>
             </div>
             <div className="flex justify-evenly items-center h-screen">
                 <Card
