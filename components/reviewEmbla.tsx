@@ -18,7 +18,7 @@ const EmblaCarousel: React.FC<PropType> = (props) => {
     const onButtonClick = useCallback((emblaApi: EmblaCarouselType) => {
         const { autoplay } = emblaApi.plugins()
         if (!autoplay) return
-        if (autoplay.options.stopOnInteraction !== false) autoplay.stop()
+        // if (autoplay.options.stopOnInteraction !== false) autoplay.stop()
     }, [])
 
     const { selectedIndex, scrollSnaps, onDotButtonClick } = useDotButton(

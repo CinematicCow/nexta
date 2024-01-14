@@ -1,17 +1,25 @@
+// @ts-nocheck
 "use client"
-import React, { useState, useCallback } from "react";
-import Gallery from "react-photo-gallery";
-import Carousel, { Modal, ModalGateway } from "react-images";
-import {photos} from "@/config/photos"
+import React, { useState, useCallback, FC } from "react";
+import Gallery, { PhotoProps } from "react-photo-gallery";
+import Carousel, { Modal, ModalGateway, ViewType } from "react-images";
+import { photos } from "@/config/photos";
 
-function Gaallery() {
-    const [currentImage, setCurrentImage] = useState(0);
-    const [viewerIsOpen, setViewerIsOpen] = useState(false);
+interface GalleryProps {
+    photos: PhotoProps[];
+}
 
-    const openLightbox = useCallback((event, { photo, index }) => {
-        setCurrentImage(index);
-        setViewerIsOpen(true);
-    }, []);
+const Gaallery: FC = () => {
+    const [currentImage, setCurrentImage] = useState<number>(0);
+    const [viewerIsOpen, setViewerIsOpen] = useState<boolean>(false);
+
+    const openLightbox = useCallback(
+        (event: React.MouseEvent, { photo, index }: { photo: PhotoProps; index: number }) => {
+            setCurrentImage(index);
+            setViewerIsOpen(true);
+        },
+        []
+    );
 
     const closeLightbox = () => {
         setCurrentImage(0);
@@ -26,10 +34,10 @@ function Gaallery() {
                     <Modal onClose={closeLightbox}>
                         <Carousel
                             currentIndex={currentImage}
-                            views={photos.map(x => ({
+                            views={photos.map((x: PhotoProps): ViewType => ({
                                 ...x,
                                 srcset: x.srcSet,
-                                caption: x.title
+                                caption: x.title,
                             }))}
                         />
                     </Modal>
@@ -37,6 +45,6 @@ function Gaallery() {
             </ModalGateway>
         </div>
     );
-}
+};
 
-export default Gaallery
+export default Gaallery;

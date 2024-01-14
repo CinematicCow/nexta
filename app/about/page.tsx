@@ -36,7 +36,7 @@ function About() {
                     We are a local family friendly cafe!
                 </h1>
                 <p className="mt-8 font-sen font-light text-clip max-w-5xl text-center text-2xl">
-                    😊 We'd love to serve you and your friends & family our great coffee & super good looking sumptuous collection of breakfast and lunch served all day! Our healthy Poke bowls are an absolute
+                    😊 We&apos;d love to serve you and your friends & family our great coffee & super good looking sumptuous collection of breakfast and lunch served all day! Our healthy Poke bowls are an absolute
                     delight :) We continuously strive to provide a unique, well-rounded, enjoyable and memorable experience for our guests. and YES we are dog friendly! You can give us a call to make a booking to reserve a table for you before
                     you come !
                 </p>
