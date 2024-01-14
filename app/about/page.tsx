@@ -51,7 +51,7 @@ function About() {
 
                 <Card
                     title="Convenient Takeaways"
-                    desc="Take the Second Home experience with you. Order online and collect your takeaways. We have plenty of options to choose from."
+                    desc="Take the cafe experience with you. Collect your takeaways. We have plenty of options to choose from."
                     img="https://images.unsplash.com/photo-1597579018905-8c807adfbed4?w=400&h=300&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
                 />
 
