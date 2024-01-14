@@ -6,7 +6,8 @@ const bookingSchema = new Schema({
     phoneNumber: String,
     guests: Number,
     bookingDate: Date,
-    bookingTime: String
+    bookingTime: String,
+    type: String
 })
 
 const Booking = mongoose.models.Booking || mongoose.model("Booking", bookingSchema);

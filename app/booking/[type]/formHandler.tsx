@@ -5,17 +5,22 @@ import Booking from "@/lib/models/booking"
 
 export const addBooking = async (formData: FormData) => {
     // establish connection
-    await Mongodb()
+     await Mongodb()
 
-    await Booking.create({
+     await Booking.create({
         fullName: formData.get("fullName"),
         email: formData.get("email"),
         phoneNumber: formData.get("phone"),
         guests: formData.get("numGuests"),
         bookingDate: formData.get("bookingDate"),
         bookingTime: formData.get("bookingTime"),
+        type: formData.get("type")
     })
 
     console.log('RESERVED!')
+    return {
+        message: "RESERVED!"
+    }
+    
 }
 

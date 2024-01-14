@@ -1,9 +1,9 @@
 "use client";
 
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import { z } from "zod";
 import { addBooking } from "./formHandler";
-import { useFormStatus } from "react-dom";
+import Button from "./button";
 
 type BookingParams = {
     params: {
@@ -18,12 +18,14 @@ const reservationSchema = z.object({
     bookingDate: z.string().regex(/^\d{4}-\d{2}-\d{2}$/),
     bookingTime: z.string().regex(/^\d{2}:\d{2}$/),
     numGuests: z.number().positive(),
+    type: z.string()
 });
 
 
 type ReservationFormData = z.infer<typeof reservationSchema>;
 
 const BookingPage = ({ params }: BookingParams) => {
+    const [param, setParam] = useState<string>('');
     const [formData, setFormData] = useState<ReservationFormData>({
         fullName: '',
         email: '',
@@ -31,6 +33,7 @@ const BookingPage = ({ params }: BookingParams) => {
         bookingDate: '',
         bookingTime: '',
         numGuests: 0,
+        type: ''
     });
 
     const handleChange = (e: React.ChangeEvent<HTMLInputElement>) => {
@@ -41,22 +44,12 @@ const BookingPage = ({ params }: BookingParams) => {
         }));
     };
 
-    const handleSubmit = (e: React.FormEvent<HTMLFormElement>) => {
-        e.preventDefault();
-
-        try {
-            // reservationSchema.parse(formData);
-            console.log('Form Data:', formData);
-        } catch (error) {
-            console.error('Validation Error:', error);
-        }
-    };
-
-    const { pending } = useFormStatus()
+    useEffect(() => {
+        setParam(params.type)
+    }, [])
 
     return (
         <div className="min-h-screen">
-
             <div
                 className="hero"
                 style={{ backgroundImage: "url(https://plus.unsplash.com/premium_photo-1672694778664-5b32f3c516aa?q=80&w=1470&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D)", minHeight: "40em" }}
@@ -68,6 +61,7 @@ const BookingPage = ({ params }: BookingParams) => {
                     </div>
                 </div>
             </div>
+            <div></div>
 
             <div className="flex flex-col justify-center items-center mt-20">
                 <form action={addBooking} className="border border-primary rounded-lg p-11">
@@ -147,8 +141,14 @@ const BookingPage = ({ params }: BookingParams) => {
                             />
                         </label>
                     </div>
+                    <label className="form-control w-full max-w-xs hide">
+                        <input type="text" className="input input-bordered w-full max-w-xs"
+                            name="type"
+                            value={param}
+                        />
+                    </label>
                     <br />
-                    <button className="btn btn-primary container mx-auto" disabled={true} type="submit" aria-disabled={pending}>Reserve</button>
+                    <Button text="Book Now" />
                 </form>
 
             </div>
