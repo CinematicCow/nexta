@@ -10,12 +10,17 @@
   },
   "dependencies": {
     "@next/font": "^14.0.4",
+    "embla-carousel-autoplay": "^8.0.0-rc19",
     "embla-carousel-react": "^8.0.0-rc19",
     "lucide-react": "^0.309.0",
     "mongoose": "^8.0.4",
     "next": "latest",
     "react": "^18",
     "react-dom": "^18",
+    "react-fullscreen-slideshow": "^1.2.0",
+    "react-images": "^1.2.0-beta.7",
+    "react-photo-gallery": "^8.0.0",
+    "react-spring-lightbox": "^1.8.0",
     "zod": "^3.22.4"
   },
   "devDependencies": {

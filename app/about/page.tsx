@@ -33,19 +33,16 @@ function About() {
 
             <div className="flex flex-col justify-center items-center pt-[120px] mb-[5em]">
                 <h1 className="font-typer text-6xl text-center max-w-xl">
-                    Second Home Cafe is your home away from home…
+                    We are a local family friendly cafe!
                 </h1>
                 <p className="mt-8 font-sen font-light text-clip max-w-5xl text-center text-2xl">
-                    An ode to a place where friends & family can enjoy good food, conversations & laughter. Some of
-                    our greatest hits are freshly brewed coffee, breakfast, smoothies, and a bespoke café menu. Food
-                    should stimulate the mind and enrich the soul. We focus on local and sustainable fresh produce,
-                    providing better quality and better-tasting food for guests. Our fantastic team is inspired to
-                    create dishes that are banging with flavours. We offer exceptional service that makes your visit
-                    a memorable experience.
+                    😊 We'd love to serve you and your friends & family our great coffee & super good looking sumptuous collection of breakfast and lunch served all day! Our healthy Poke bowls are an absolute
+                    delight :) We continuously strive to provide a unique, well-rounded, enjoyable and memorable experience for our guests. and YES we are dog friendly! You can give us a call to make a booking to reserve a table for you before
+                    you come !
                 </p>
             </div>
 
-            <div className="flex flex-row flex-wrap justify-around items-center mb-32 h-ful ">
+            <div className="flex flex-row flex-wrap justify-evenly items-center mb-32 h-full sm:px-96">
                 <Card
                     title="Dine-in Food & Drinks"
                     desc="Welcome! Come on in, pull a chair & enjoy the cosy atmosphere. Dine in and enjoy excellent coffee, refreshing meals, light snacks, lunch and more."
@@ -58,11 +55,6 @@ function About() {
                     img="https://images.unsplash.com/photo-1597579018905-8c807adfbed4?w=400&h=300&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
                 />
 
-                <Card
-                    title="Venue Hire & Catering"
-                    desc="Birthdays, Bridal showers, Christmas parties or Work events, let us host your event while you relax and make good memories. We are happy to cater at your chosen venue as well."
-                    img="https://images.unsplash.com/photo-1609590981063-d495e2914ce4?w=400&h=300&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
-                />
             </div>
         </div >
     )

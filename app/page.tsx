@@ -1,12 +1,23 @@
 "use client"
 import { items } from "@/config/carousel"
+import Embla from "@/components/Embla"
+import ReviewEmbla from "@/components/reviewEmbla"
 import { reviews } from "@/config/review"
-import Image from "next/image"
-import Timer from "@/components/Timer"
+import { EmblaOptionsType } from 'embla-carousel'
 import Link from "next/link"
 
 export default function Home() {
+    const OPTIONS: EmblaOptionsType = {
+        loop: true,
+        slidesToScroll: 'auto',
+        containScroll: 'trimSnaps'
+    }
+    const SLIDE_COUNT = items.length
+    const SLIDES = Array.from(Array(SLIDE_COUNT).keys())
 
+const REVIEW_OPTIONS: EmblaOptionsType = { align: 'start', containScroll: 'trimSnaps' }
+    const REVIEW_SLIDE_COUNT = reviews.length
+    const REVIEW_SLIDES = Array.from(Array(REVIEW_SLIDE_COUNT).keys())
     return (
         <div>
 
@@ -21,7 +32,7 @@ export default function Home() {
             </div>
 
             <div className="flex flex-col justify-center items-center pt-[120px] mb-36">
-                <h1 className="font-typer text-6xl text-center max-w-xl">
+                <h1 className="font-typer text-5xl text-center max-w-xl">
                     All-day menu, fresh, vibrant, locally sourced
                 </h1>
                 <p className="mt-8 font-sen font-light text-clip max-w-5xl text-center text-2xl">
@@ -35,22 +46,10 @@ export default function Home() {
                 </div>
             </div>
 
-            <div className="flex flex-col justify-center items-center">
-                <div className="carousel carousel-center  p-4 space-x-10 ">
-                    {
-                        items.map((item, i) => {
-                            return (
-                                <div className="carousel-item" key={i}>
-                                    <Image src={item.url} alt={item.alt} height={100} width={300} className="border-4 border-image rounded-md" />
-                                </div>
-                            )
-                        })
-                    }
-                </div>
-            </div>
+                <Embla slides={SLIDES} options={OPTIONS} />
 
             <div className="flex flex-col justify-center items-center pt-[120px] mb-36">
-                <h1 className="font-typer text-6xl text-center max-w-xl">Open early, every day…</h1>
+                <h1 className="font-typer text-5xl text-center max-w-xl">Open early, every day…</h1>
                 <p className="mt-8 font-sen font-light text-clip max-w-5xl text-center text-2xl">
                     Come in for a morning coffee or a tasty breakfast from 7 am every morning, enjoy delicious
                     brunch and lunch dishes until 3 pm every day. Experience a refreshingly personal yet skilled
@@ -59,19 +58,9 @@ export default function Home() {
             </div>
 
             <div className="flex flex-col justify-center items-center pt-[120px] pb-20 bg-warning">
-                <h1 className="font-typer text-6xl text-center max-w-xl">Customers Reviews</h1>
+                <h1 className="font-typer text-5xl text-center max-w-xl">Customers Reviews</h1>
                 <div className="w-1/2 carousel rounded-box">
-                    {
-                        reviews.map((review, i) => {
-                            return (
-                                <div className="carousel-item w-full justify-center items-center" key={i}>
-                                    <p className="mt-8 font-sen font-light text-clip max-w-5xl text-center text-2xl">
-                                        {review.text}
-                                    </p>
-                                </div>
-                            )
-                        })
-                    }
+                    <ReviewEmbla slides={REVIEW_SLIDES} options={REVIEW_OPTIONS} />
                 </div>
             </div>
         </div >

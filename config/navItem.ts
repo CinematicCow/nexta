@@ -18,7 +18,7 @@ const navMenus: Array<NewType> = [
     },
     {
         name: 'Gallery',
-        route: '/'
+        route: '/gallery'
     }
 ];
 export { navMenus };
