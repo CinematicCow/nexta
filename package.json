@@ -10,6 +10,7 @@
   },
   "dependencies": {
     "@next/font": "^14.0.4",
+    "embla-carousel-react": "^8.0.0-rc19",
     "lucide-react": "^0.309.0",
     "mongoose": "^8.0.4",
     "next": "latest",
