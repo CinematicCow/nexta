@@ -2,6 +2,8 @@
 
 import { useState } from "react";
 import { z } from "zod";
+import { addBooking } from "./formHandler";
+import { useFormStatus } from "react-dom";
 
 type BookingParams = {
     params: {
@@ -13,8 +15,8 @@ const reservationSchema = z.object({
     fullName: z.string(),
     email: z.string().email(),
     phone: z.number().min(10).max(10),
-    reservationDate: z.string().regex(/^\d{4}-\d{2}-\d{2}$/),
-    reservationTime: z.string().regex(/^\d{2}:\d{2}$/),
+    bookingDate: z.string().regex(/^\d{4}-\d{2}-\d{2}$/),
+    bookingTime: z.string().regex(/^\d{2}:\d{2}$/),
     numGuests: z.number().positive(),
 });
 
@@ -26,8 +28,8 @@ const BookingPage = ({ params }: BookingParams) => {
         fullName: '',
         email: '',
         phone: 0,
-        reservationDate: '',
-        reservationTime: '',
+        bookingDate: '',
+        bookingTime: '',
         numGuests: 0,
     });
 
@@ -50,6 +52,8 @@ const BookingPage = ({ params }: BookingParams) => {
         }
     };
 
+    const { pending } = useFormStatus()
+
     return (
         <div className="min-h-screen">
 
@@ -66,7 +70,7 @@ const BookingPage = ({ params }: BookingParams) => {
             </div>
 
             <div className="flex flex-col justify-center items-center mt-20">
-                <form onSubmit={handleSubmit} className="border border-primary rounded-lg p-11">
+                <form action={addBooking} className="border border-primary rounded-lg p-11">
                     <div className="join mb-9">
                         <label className="form-control w-full max-w-xs mr-9">
                             <div className="label">
@@ -76,6 +80,7 @@ const BookingPage = ({ params }: BookingParams) => {
                                 name="fullName"
                                 value={formData.fullName}
                                 onChange={handleChange}
+                                required
                             />
                         </label>
                         <label className="form-control w-full max-w-xs">
@@ -86,6 +91,7 @@ const BookingPage = ({ params }: BookingParams) => {
                                 name="email"
                                 value={formData.email}
                                 onChange={handleChange}
+                                required
                             />
                         </label>
                     </div>
@@ -99,6 +105,7 @@ const BookingPage = ({ params }: BookingParams) => {
                                 name="phone"
                                 value={formData.phone}
                                 onChange={handleChange}
+                                required
                             />
                         </label>
                         <label className="form-control w-full max-w-xs">
@@ -110,6 +117,7 @@ const BookingPage = ({ params }: BookingParams) => {
                                 value={formData.numGuests}
                                 onChange={handleChange}
                                 max={10}
+                                required
                             />
                         </label>
                     </div>
@@ -120,9 +128,10 @@ const BookingPage = ({ params }: BookingParams) => {
                                 <span className="label-text">Reservation Date</span>
                             </div>
                             <input type="date" className="input input-bordered w-full max-w-xs"
-                                name="reservationDate"
-                                value={formData.reservationDate}
+                                name="bookingDate"
+                                value={formData.bookingDate}
                                 onChange={handleChange}
+                                required
                             />
                         </label>
                         <br />
@@ -131,14 +140,15 @@ const BookingPage = ({ params }: BookingParams) => {
                                 <span className="label-text">Reservation Time</span>
                             </div>
                             <input type="time" className="input input-bordered w-full max-w-xs"
-                                name="reservationTime"
-                                value={formData.reservationTime}
+                                name="bookingTime"
+                                value={formData.bookingTime}
                                 onChange={handleChange}
+                                required
                             />
                         </label>
                     </div>
                     <br />
-                    <button className="btn btn-primary container mx-auto" type="submit">Reserve</button>
+                    <button className="btn btn-primary container mx-auto" disabled={true} type="submit" aria-disabled={pending}>Reserve</button>
                 </form>
 
             </div>
