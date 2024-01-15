@@ -15,7 +15,7 @@ export default function Home() {
     const SLIDE_COUNT = items.length
     const SLIDES = Array.from(Array(SLIDE_COUNT).keys())
 
-const REVIEW_OPTIONS: EmblaOptionsType = { align: 'start', containScroll: 'trimSnaps' }
+    const REVIEW_OPTIONS: EmblaOptionsType = { align: 'start', containScroll: 'trimSnaps' }
     const REVIEW_SLIDE_COUNT = reviews.length
     const REVIEW_SLIDES = Array.from(Array(REVIEW_SLIDE_COUNT).keys())
     return (
@@ -33,29 +33,22 @@ const REVIEW_OPTIONS: EmblaOptionsType = { align: 'start', containScroll: 'trimS
 
             <div className="flex flex-col justify-center items-center pt-[120px] mb-36">
                 <h1 className="font-typer text-5xl text-center max-w-xl">
-                    All-day menu, fresh, vibrant, locally sourced
+                    Open early, every day…
                 </h1>
                 <p className="mt-8 font-sen font-light text-clip max-w-5xl text-center text-2xl">
-                    All-day menu prepared with love, care & amazingly fresh, locally sourced ingredients.
-                    Gluten-free, Vegan & Vegetarian options to suit your dietary requirements. All of this, paired
-                    with excellent coffee.
+                    Step into a world of flavor at our cozy cafe, where the aroma of freshly brewed coffee welcomes
+                    you from <span className="font-bold">6:30 am every morning</span>. Indulge in a delightful
+                    breakfast or savor our tempting brunch and lunch offerings <span className="font-bold">until 2 pm daily.</span>
+                    Our menu is crafted to satisfy your cravings with a perfect blend of taste and quality.
                 </p>
 
                 <div className="mt-[1.5em]">
-                    <Link href="/gallery" className="font-sen font-semibold hover:underline">view gallery &gt;</Link>
+                    <Link href="/gallery" className="font-sen font-semibold underline">view our menu &gt;</Link>
                 </div>
             </div>
 
-                <Embla slides={SLIDES} options={OPTIONS} />
+            <Embla slides={SLIDES} options={OPTIONS} />
 
-            <div className="flex flex-col justify-center items-center pt-[120px] mb-36">
-                <h1 className="font-typer text-5xl text-center max-w-xl">Open early, every day…</h1>
-                <p className="mt-8 font-sen font-light text-clip max-w-5xl text-center text-2xl">
-                    Come in for a morning coffee or a tasty breakfast from 7 am every morning, enjoy delicious
-                    brunch and lunch dishes until 3 pm every day. Experience a refreshingly personal yet skilled
-                    service by a friendly team in a vibrant and lively environment. Unwind with us!
-                </p>
-            </div>
 
             <div className="flex flex-col justify-center items-center pt-[120px] pb-20 bg-warning">
                 <h1 className="font-typer text-5xl text-center max-w-xl">Customers Reviews</h1>

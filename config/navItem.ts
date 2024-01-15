@@ -14,11 +14,11 @@ const navMenus: Array<NewType> = [
     },
     {
         name: 'Contact',
-        route: '/'
+        route: '/contact'
     },
     {
-        name: 'Gallery',
-        route: '/gallery'
+        name: 'Menu',
+        route: '/menu'
     }
 ];
 export { navMenus };

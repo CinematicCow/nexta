@@ -63,7 +63,7 @@ const BookingPage = ({ params }: BookingParams) => {
             </div>
             <div></div>
 
-            <div className="flex flex-col justify-center items-center mt-20">
+            <div className="flex flex-col justify-center items-center my-20">
                 <form action={addBooking} className="border border-primary rounded-lg p-11">
                     <div className="join mb-9">
                         <label className="form-control w-full max-w-xs mr-9">

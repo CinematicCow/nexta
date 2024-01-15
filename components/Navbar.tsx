@@ -1,6 +1,7 @@
 import Link from "next/link"
 import { navMenus } from "../config/navItem"
 import Image from "next/image"
+import { Phone } from "lucide-react"
 
 function Navbar() {
     return (
@@ -30,12 +31,13 @@ function Navbar() {
                         {
                             navMenus.map((menu, i) => {
                                 return (
-                                    <li key={i+1}>
+                                    <li key={i + 1}>
                                         <Link href={menu.route}>{menu.name}</Link>
                                     </li>
                                 )
                             })
                         }
+                        <Link href='/booking' className="btn btn-primary text-neutral-100">Book a table</Link>
                     </ul>
                 </div>
 
@@ -49,18 +51,24 @@ function Navbar() {
             <div className="navbar-center hidden lg:flex">
                 <ul className="menu menu-horizontal px-1">
                     {
-                        navMenus.map((menu,i) => {
+                        navMenus.map((menu, i) => {
                             return (
-                                <li key={i+1}>
+                                <li key={i + 1}>
                                     <Link href={menu.route}>{menu.name}</Link>
                                 </li>
                             )
                         })
                     }
                 </ul>
-            </div>
-            <div className="navbar-end">
                 <Link href='/booking' className="btn btn-primary text-neutral-100">Book a table</Link>
+            </div>
+            <div className="navbar-end hidden lg:flex">
+                <Phone className="w-4 mr-2" />
+                <p className="font-light font-sem">02 8626 9007</p>
+            </div>
+
+            <div className="navbar-end lg:hidden">
+                <Link href="tel:0286269007"><Phone className="w-10 -mr-7" /></Link>
             </div>
         </div>
     )

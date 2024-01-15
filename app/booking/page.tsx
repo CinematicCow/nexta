@@ -10,11 +10,11 @@ const Card = (props: CardProps) => {
 
     return (
         <Link href={"/booking/" + props.location}>
-            <div className="card w-auto h-auto bg-base-100 shadow-xl image-full" >
+            <div className="card bg-base-100 shadow-xl image-full m-10 transform transition duration-300 active:scale-105 hover:scale-110" >
                 <figure><Image src={props.img} alt={props.location} width={600} height={200} /></figure>
                 <div className="card-body text-center">
-                    <h2 className="mt-10 text-4xl font-typer ">{props.location}</h2>
-                    <p className="mt-8 font-sen">{props.desc}</p>
+                    <h2 className="mt-10 text-4xl font-typer">{props.location}</h2>
+                    <p className="mt-8 font-sen text-wrap">{props.desc}</p>
                 </div>
             </div>
         </Link>
@@ -25,7 +25,7 @@ function Booking() {
 
 
     return (
-        <div className="h-screen">
+        <div className="flex flex-col min-h-screen mb-20">
 
             <div
                 className="hero"
@@ -38,20 +38,20 @@ function Booking() {
                     </div>
                 </div>
             </div>
-            <div className="flex justify-evenly items-center mt-20">
+            <div className="flex flex-col md:flex-row justify-evenly items-center mt-20">
                 <Card
                     location="Indoor"
-                    desc="This is a sample description for the card."
+                    desc="Discover comfort and charm indoors. Reserve your table for a cozy, aromatic experience with delightful meals and good company."
                     img="https://images.unsplash.com/photo-1494346480775-936a9f0d0877?q=80&w=1416&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
                 />
                 <Card
                     location="Outdoor"
-                    desc="This is a sample description for the card."
+                    desc="Enjoy open-air dining in our outdoor spot. Click to book a table and relish the joy of breakfast and lunch surrounded by nature's beauty."
                     img="https://images.unsplash.com/photo-1613165716050-dac0978669f9?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTJ8fG91dGRvb3IlMjBjYWZlfGVufDB8MHwwfHx8MA%3D%3D"
                 />
                 <Card
                     location="Garden"
-                    desc="This is a sample description for the card."
+                    desc="Escape to our enchanting garden café. Book a table to dine amidst lush greenery, creating memorable moments in a picturesque setting."
                     img="https://images.unsplash.com/photo-1594498653385-d5172c532c00?q=80&w=1374&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
                 />
             </div>

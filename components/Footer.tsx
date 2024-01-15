@@ -17,8 +17,7 @@ function Footer() {
             <nav>
                 <div className="grid grid-flow-col gap-4">
                     <InstagramIcon />
-                    <FacebookIcon />
-                    <TwitterIcon />
+                    <p> Connect with us on Instagram</p>
                 </div>
             </nav>
             <aside>
