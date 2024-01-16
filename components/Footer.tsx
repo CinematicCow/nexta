@@ -13,9 +13,9 @@ function Footer() {
             <nav>
                 <header className="footer-title">Links</header>
                 {
-                    navMenus.map((menu) => {
+                    navMenus.map((menu,i) => {
                         return (
-                            <Link className="link link-hover" href={menu.route}>{menu.name.toUpperCase()}</Link>
+                            <Link key={i} className="link link-hover" href={menu.route}>{menu.name.toUpperCase()}</Link>
                         )
                     })
                 }

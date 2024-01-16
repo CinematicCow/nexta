@@ -95,7 +95,7 @@ const BookingPage = ({ params }: BookingParams) => {
                             <div className="label">
                                 <span className="label-text">Phone</span>
                             </div>
-                            <input type="number" placeholder="98xxxxxxxx" className="input input-bordered w-full max-w-xs"
+                            <input type="tel" placeholder="98xxxxxxxx" className="input input-bordered w-full max-w-xs"
                                 name="phone"
                                 value={formData.phone}
                                 onChange={handleChange}
