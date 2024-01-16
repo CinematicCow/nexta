@@ -50,8 +50,8 @@ export default function Home() {
             <Embla slides={SLIDES} options={OPTIONS} />
 
 
-            <div className="flex flex-col justify-center items-center pt-[120px] pb-20 bg-warning">
-                <h1 className="font-typer text-5xl text-center max-w-xl">Customers Reviews</h1>
+            <div className="flex flex-col justify-center items-center pt-[120px] mb-20 bg-base-200">
+                <h1 className="font-typer text-5xl text-center max-w-xl">Customer Reviews</h1>
                 <div className="w-1/2 carousel rounded-box">
                     <ReviewEmbla slides={REVIEW_SLIDES} options={REVIEW_OPTIONS} />
                 </div>
