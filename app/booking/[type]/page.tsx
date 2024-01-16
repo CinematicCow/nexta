@@ -65,8 +65,8 @@ const BookingPage = ({ params }: BookingParams) => {
 
             <div className="flex flex-col justify-center items-center my-20">
                 <form action={addBooking} className="border border-primary rounded-lg p-11">
-                    <div className="join mb-9">
-                        <label className="form-control w-full max-w-xs mr-9">
+                    <div className="lg:join">
+                        <label className="form-control w-full max-w-xs mb-9 sm:mr-9">
                             <div className="label">
                                 <span className="label-text">Full Name</span>
                             </div>
@@ -90,8 +90,8 @@ const BookingPage = ({ params }: BookingParams) => {
                         </label>
                     </div>
                     <br />
-                    <div className="join mb-9">
-                        <label className="form-control w-full max-w-xs mr-9">
+                    <div className="lg:join">
+                        <label className="form-control w-full max-w-xs mb-9 sm:mr-9">
                             <div className="label">
                                 <span className="label-text">Phone</span>
                             </div>
@@ -116,12 +116,12 @@ const BookingPage = ({ params }: BookingParams) => {
                         </label>
                     </div>
                     <br />
-                    <div className="join mb-9">
-                        <label className="form-control w-full max-w-xs mr-9">
+                    <div className="lg:join">
+                        <label className="form-control w-full min-w-md sm:mr-9">
                             <div className="label">
                                 <span className="label-text">Reservation Date</span>
                             </div>
-                            <input type="date" className="input input-bordered w-full max-w-xs"
+                            <input type="date" className="input input-bordered w-full min-w-md"
                                 name="bookingDate"
                                 value={formData.bookingDate}
                                 onChange={handleChange}

@@ -75,8 +75,8 @@ const Contact = (props: Props) => {
                 </div>
 
                 <form action={handleForm} className="border border-primary rounded-lg p-11 mt-20">
-                    <div className="join mb-9">
-                        <label className="form-control w-full max-w-xs mr-9">
+                    <div className="lg:join">
+                        <label className="form-control w-full max-w-xs mb-9 sm:mr-9">
                             <div className="label">
                                 <span className="label-text">Full Name</span>
                             </div>
@@ -87,7 +87,7 @@ const Contact = (props: Props) => {
                                 required
                             />
                         </label>
-                        <label className="form-control w-full max-w-xs mr-9">
+                        <label className="form-control w-full max-w-xs mb-9">
                             <div className="label">
                                 <span className="label-text">Phone</span>
                             </div>
