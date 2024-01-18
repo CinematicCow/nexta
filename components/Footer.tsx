@@ -5,27 +5,24 @@ import { navMenus } from "../config/navItem"
 
 function Footer() {
     return (
-        <footer className="footer px-10 pt-10 pb-5 bg-neutral text-neutral-content">
-            <aside>
-                <Image src="/logo.png" alt="logo" width={70} height={50} />
-                <p>Big Tree House<br />Local family friendly cafe.</p>
-            </aside>
-            <nav>
-                <header className="footer-title">Links</header>
+        <footer className="footer footer-center p-10 bg-gradient-to-b from-primary to-lime-800 text-white text-xl">
+            <nav className="grid grid-flow-col gap-4">
                 {
-                    navMenus.map((menu,i) => {
+                    navMenus.map((menu, i) => {
                         return (
-                            <Link key={i} className="link link-hover" href={menu.route}>{menu.name.toUpperCase()}</Link>
+                            <Link key={i} href={menu.route} className="link link-hover">{menu.name} </Link>
                         )
                     })
                 }
             </nav>
             <nav>
-                <header className="footer-title">Social</header>
                 <div className="grid grid-flow-col gap-4">
-                    <Link href="https://instagram.com"><Instagram /></Link>
+                    <Instagram /> Connect with us on Instagram.
                 </div>
             </nav>
+            <aside>
+                <p>Copyright © 2024 - All right reserved by The Big Tree House.</p>
+            </aside>
         </footer>
     )
 }
