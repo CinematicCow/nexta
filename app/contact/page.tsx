@@ -52,9 +52,10 @@ const Contact = (props: Props) => {
 
             <div className="flex flex-col justify-center items-center pt-[120px] mb-[5em] px-10">
                 <p className="mt-8 font-sen font-light text-clip max-w-5xl text-center text-2xl">
-                    Welcome to <span className='font-extrabold'>Big Tree House</span>, where every cup tells a story and every dish is crafted with
+                    Welcome to <span className='font-extrabold'>Big Tree House</span>,
+                    where every cup tells a story and every dish is crafted with
                     passion. We value your feedback, inquiries, and the opportunity to connect with our community.
-                    Here's how you can get in touch with us:
+                    Here&apos;s how you can get in touch with us:
                 </p>
                 <div className='mt-14 flex flex-col justify-start lg:flex-row lg:space-x-4'>
                     <div className="mb-4">

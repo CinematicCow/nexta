@@ -3,6 +3,7 @@ import { EmblaOptionsType } from 'embla-carousel'
 import useEmblaCarousel from 'embla-carousel-react'
 import Autoplay from 'embla-carousel-autoplay'
 import { imageByIndex } from '@/config/carousel'
+import Image from 'next/image'
 
 type PropType = {
     slides: number[]
@@ -23,10 +24,12 @@ const EmblaCarousel: React.FC<PropType> = (props) => {
                             <div className="embla__slide__number">
                                 <span>{index + 1}</span>
                             </div>
-                            <img
+                            <Image
                                 className="embla__slide__img"
                                 src={imageByIndex(index)}
                                 alt="Your alt text"
+                                width={400}
+                                height={200}
                             />
                         </div>
                     ))}
