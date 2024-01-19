@@ -86,3 +86,10 @@
   right: 0;
   bottom: 0;
 }
+
+.menu-heading {
+  background-image: url('/border.png');
+  background-size: cover; /* Adjust based on your image dimensions */
+  padding: 20px; /* Adjust as needed to control the border size */
+  display: inline-block; /* Ensure padding only applies horizontally */
+}
