@@ -64,7 +64,7 @@ function Navbar() {
             </div>
             <div className="navbar-end hidden lg:flex">
                 <Phone className="w-4 mr-2" />
-                <p className="font-light font-sem">02 8626 9007</p>
+                <p className="font-sem">02 8626 9007</p>
             </div>
 
             <div className="navbar-end lg:hidden">
