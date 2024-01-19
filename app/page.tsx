@@ -43,7 +43,7 @@ export default function Home() {
                 </p>
 
                 <div className="mt-[1.5em]">
-                    <Link href="/gallery" className="font-sen font-semibold underline">view our menu &gt;</Link>
+                    <Link href="/menu" className="font-sen font-semibold underline">view our menu &gt;</Link>
                 </div>
             </div>
 
