@@ -7,10 +7,10 @@
     src:url("../public/typer.ttf");
 }
 
-body{
-    background-color:"#C3B8A7" !important;
+.bro.truncate:hover{
+    overflow:visible;
+    white-space:normal;
 }
-
 
 .border-image {
     border-image-source: url('../public/border.png');
