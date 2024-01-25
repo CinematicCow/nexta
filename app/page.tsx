@@ -19,14 +19,14 @@ export default function Home() {
     const REVIEW_SLIDE_COUNT = reviews.length
     const REVIEW_SLIDES = Array.from(Array(REVIEW_SLIDE_COUNT).keys())
     return (
-        <div>
+        <div className="bg-base-100">
 
 
-            <div className="hero min-h-screen mb-36" style={{ backgroundImage: "url(https://images.unsplash.com/photo-1600093463592-8e36ae95ef56?q=80&w=1470&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D)" }}>
+            <div className="hero min-h-screen mb-36 -z-50" style={{ backgroundImage: "url(cafe.jpg)" }}>
                 <div className="hero-overlay bg-opacity-50" />
                 <div className="hero-content text-center text-neutral-content">
-                    <div className="max-w-md">
-                        <h1 className="mb-5 text-8xl font-typer">Good food. Good coffee.</h1>
+                    <div className="min-w-lg">
+                        <h1 className="mb-5 text-8xl font-typer">Serving good food & happy moods.</h1>
                     </div>
                 </div>
             </div>
@@ -50,7 +50,7 @@ export default function Home() {
             <Embla slides={SLIDES} options={OPTIONS} />
 
 
-            <div className="flex flex-col justify-center items-center pt-[120px] mb-20 bg-base-200">
+            <div className="flex flex-col justify-center items-center pt-[120px] pb-20 bg-base-200">
                 <h1 className="font-typer text-5xl text-center max-w-xl">Customer Reviews</h1>
                 <div className="w-1/2 carousel rounded-box">
                     <ReviewEmbla slides={REVIEW_SLIDES} options={REVIEW_OPTIONS} />

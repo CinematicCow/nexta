@@ -6,8 +6,8 @@ const Card = (props: CardProps) => {
         <div className="card card-compact w-96 h-full bg-base-100 shadow-xl m-10">
             <figure><Image src={props.img} alt="foto" width={400} height={100} /></figure>
             <div className="card-body">
-                <h2 className="card-title">{props.title}</h2>
-                <p>{props.desc}</p>
+                <h2 className="card-title font-typer">{props.title}</h2>
+                <p className="font-sen">{props.desc}</p>
             </div>
         </div>
 

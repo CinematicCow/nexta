@@ -1,7 +1,9 @@
 export type Menu = {
     name: string,
     price: number,
-    desc: string
+    desc: string,
+    isNew?: boolean
+
 }
 
 export const menu: Array<Menu> = [
@@ -26,9 +28,10 @@ export const menu: Array<Menu> = [
         desc: "2 free range eggs your way w/ sourdough"
     },
     {
-        name: "blat",
+        name: "blyat",
         price: 17,
-        desc: "bacon, lettuce, avocado, tomato & aioli sauce - served on turkish flat brea"
+        desc: "bacon, lettuce, avocado, tomato & aioli sauce - served on turkish flat brea",
+        isNew: true
     },
     {
         name: "bacon & egg roll",
@@ -43,7 +46,7 @@ export const menu: Array<Menu> = [
 ]
 
 const fetchMenu = async () => {
-    console.log("server",menu)
+    console.log("server", menu)
     return menu
 }
 

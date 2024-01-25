@@ -1,11 +1,32 @@
+"use client"
 import Link from "next/link"
 import { navMenus } from "../config/navItem"
 import Image from "next/image"
 import { Phone } from "lucide-react"
+import { useEffect, useState } from "react";
 
 function Navbar() {
+    const [scrolled, setScrolled] = useState(false);
+
+    useEffect(() => {
+        const handleScroll = () => {
+            // Adjust the scroll threshold based on your hero image height
+            const scrollThreshold = 300;
+            const isScrolled = window.scrollY > scrollThreshold;
+
+            setScrolled(isScrolled);
+        };
+
+        // Attach the event listener when the component mounts
+        window.addEventListener('scroll', handleScroll);
+
+        // Clean up the event listener when the component unmounts
+        return () => {
+            window.removeEventListener('scroll', handleScroll);
+        };
+    }, []);
     return (
-        <div className="navbar bg-base-100 px-10">
+        <div className={`navbar px-10 fixed z-50 transition-all ${scrolled ? 'bg-base-100 shadow' : 'bg-transparent text-white'}`}>
             <div className="navbar-start">
                 <div className="dropdown">
                     <div tabIndex={0} role="button" className="btn btn-ghost lg:hidden">
@@ -26,7 +47,7 @@ function Navbar() {
                     </div>
                     <ul
                         tabIndex={-1}
-                        className="menu menu-sm dropdown-content mt-3 z-[1] p-2 shadow bg-base-100 rounded-box w-52"
+                        className="menu menu-sm dropdown-content mt-3 z-[1] p-2 shadow bg-base-100 rounded-box w-52 text-black"
                     >
                         {
                             navMenus.map((menu, i) => {
