@@ -3,7 +3,7 @@ import type { Menu } from './menuHandler'
 
 type MenuCardProps = {
     className?: string,
-    menu?: Menu
+    menu: Menu
 }
 
 
